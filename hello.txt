@@ -4,3 +4,4 @@ New feature
 2nd commit on new feature
 staring to work on my cool2 feature
 final change on cool2
+starting my cool3 feature
