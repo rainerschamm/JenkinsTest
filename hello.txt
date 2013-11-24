@@ -5,3 +5,4 @@ New feature
 staring to work on my cool2 feature
 final change on cool2
 starting my cool3 feature
+another change in cool3
