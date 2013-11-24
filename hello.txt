@@ -1,2 +1,4 @@
 1st commit on develop
 2nd commit on develop
+New feature
+2nd commit on new feature
