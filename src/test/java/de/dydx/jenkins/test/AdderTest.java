@@ -84,4 +84,16 @@ public class AdderTest
       int result = instance.add(x, y);
       assertEquals(expResult, result);
    }
+
+   @Test
+   public void testAddFour()
+   {
+      System.out.println("add");
+      int x = 2;
+      int y = 3;
+      Adder instance = new Adder();
+      int expResult = 5;
+      int result = instance.add(x, y);
+      assertEquals(expResult, result);
+   }
 }
