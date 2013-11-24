@@ -50,7 +50,7 @@ public class AdderTest
     * Test of add method, of class Adder.
     */
    @Test
-   public void testAdd()
+   public void testAddOne()
    {
       System.out.println("add");
       int x = 2;
@@ -62,7 +62,7 @@ public class AdderTest
    }
 
    @Test
-   public void testAddNew()
+   public void testAddTwo()
    {
       System.out.println("add");
       int x = 2;
