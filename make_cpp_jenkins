@@ -1,6 +1,17 @@
 #!/bin/bash
 
+#
+# BackupWorker
+#
 cd cpp_jenkins
-make clean
-make
+rm -rf ./dist
+make clean && make
+if [ $? -ne 0 ]; then
+   echo "BackupWorker Build failed!!!"
+   exit 1
+fi
 
+echo ""
+echo "  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-"
+echo "                   BackupWorker Build successful!!!"
+echo "  .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-.   .-.-"
