@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd cpp_jenkins
+make clean
+make
+
