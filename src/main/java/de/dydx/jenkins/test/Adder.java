@@ -10,19 +10,19 @@ package de.dydx.jenkins.test;
 
 /**
  * Adder
+ *
  * @author rschamm
  */
-public class Adder
-{
+public class Adder {
 
    /**
     * Add method adds two numbers
+    *
     * @param x Number one
     * @param y Number two
-    * @return  The result
+    * @return The result
     */
-   public int add(int x, int y)
-   {
+   public int add(int x, int y) {
       return x + y;
    }
 }
