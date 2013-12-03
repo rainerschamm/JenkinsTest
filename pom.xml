@@ -25,13 +25,13 @@
                   <format>xml</format>
                </formats>
                <check>
-                  <branchRate>85</branchRate>
-                  <lineRate>85</lineRate>
+                  <branchRate>25</branchRate>
+                  <lineRate>25</lineRate>
                   <haltOnFailure>true</haltOnFailure>
-                  <totalBranchRate>85</totalBranchRate>
-                  <totalLineRate>85</totalLineRate>
-                  <packageLineRate>85</packageLineRate>
-                  <packageBranchRate>85</packageBranchRate>
+                  <totalBranchRate>25</totalBranchRate>
+                  <totalLineRate>25</totalLineRate>
+                  <packageLineRate>25</packageLineRate>
+                  <packageBranchRate>25</packageBranchRate>
                </check>
             </configuration>
             <executions>
@@ -50,8 +50,8 @@
             <version>2.11</version>
             <executions>
                <execution>
-                  <id>validate</id>
-                  <phase>validate</phase>
+                  <id>checkstyle</id>
+                  <phase>verify</phase>
                   <configuration>
                      <configLocation>src/main/resources/checkstyle.xml</configLocation>
                      <encoding>UTF-8</encoding>
@@ -68,9 +68,29 @@
          </plugin>
 
          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>findbugs-maven-plugin</artifactId>
+            <version>2.5.3</version>
+            <executions>
+               <execution>
+                  <id>findbugs</id>
+                  <phase>verify</phase>
+                  <configuration>
+                     <effort>Max</effort>
+                     <xmlOutput>true</xmlOutput>
+                     <fork>false</fork>
+                  </configuration>
+                  <goals>
+                     <goal>check</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+
+         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
-            <version>3.2</version>
+            <version>3.3</version>
             <configuration>
                <reportPlugins>
                   <plugin>
@@ -90,6 +110,17 @@
                      <version>2.11</version>
                      <configuration>
                         <configLocation>src/main/resources/checkstyle.xml</configLocation>
+                     </configuration>
+                  </plugin>
+
+                  <plugin>
+                     <groupId>org.codehaus.mojo</groupId>
+                     <artifactId>findbugs-maven-plugin</artifactId>
+                     <version>2.5.3</version>
+                     <configuration>
+                        <effort>Max</effort>
+                        <xmlOutput>true</xmlOutput>
+                        <fork>false</fork>
                      </configuration>
                   </plugin>
                </reportPlugins>
