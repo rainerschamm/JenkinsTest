@@ -22,7 +22,8 @@ public class Adder {
     * @param y Number two
     * @return The result
     */
-   public int add(int x, int y) {
+   public int add(int x, int y) 
+   {
       return x + y;
    }
 }
